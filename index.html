@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plate Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="initPage()">
+    <div class="container">
+        <p>Weight:
+            <input id="weight" type="number" min="0" placeHolder="Total weight"></p>
+        <p>Bar weight:
+            <input id="barWeight" type="number" min="0" value="45"></p>
+        <button type="button" id="calculatebtn" onclick="doCalculation('weight', 'barWeight')">Calculate</button>
+    </div>
+    <div class="container">
+        <p>On one side of the barbell:</p>
+        <ul class="list-group" id="rows">
+            <!-- Plates go here -->
+        </ul>
+        <p id="remaining">Remaining:</p>
+        <button type="button" onclick="buttonSwitchUnit(this)" data-unitname="kgs">Switch to kgs</button>
+    </div>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>
